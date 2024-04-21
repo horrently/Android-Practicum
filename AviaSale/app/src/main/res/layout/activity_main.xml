@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/app_name"
+        app:titleTextColor="#FFFFFF"
+        android:layout_marginBottom="5dp" />
+
+    <!-- город вылета -->
+    <TextView
+        android:id="@+id/textDepartureCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/departure_city"
+        android:textSize="16sp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerDepartureCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/departure_cities"
+        android:layout_below="@id/textDepartureCity"
+        android:layout_marginBottom="13dp"/>
+
+    <!--  город прилета -->
+    <TextView
+        android:id="@+id/textArrivalCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arrival_city"
+        android:textSize="16sp"
+        android:layout_below="@id/spinnerDepartureCity"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerArrivalCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/arrival_cities"
+        android:layout_below="@id/textArrivalCity"
+        android:layout_marginBottom="13dp"/>
+
+    <!-- дата вылета -->
+    <TextView
+        android:id="@+id/textDepartureDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/departure_date"
+        android:textSize="16sp"
+        android:layout_below="@id/spinnerArrivalCity"
+        android:layout_marginBottom="5dp"/>
+
+    <DatePicker
+        android:id="@+id/editDepartureDate"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginBottom="11dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <!-- дата прилета -->
+    <TextView
+        android:id="@+id/textArrivalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arrival_date"
+        android:textSize="16sp"
+        android:layout_below="@id/editDepartureDate"
+        android:layout_marginBottom="5dp"/>
+
+    <DatePicker
+        android:id="@+id/editArrivalDate"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginBottom="11dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <!-- пассажиры -->
+    <TextView
+        android:id="@+id/textPassengerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passenger_count"
+        android:textSize="16sp"
+        android:layout_below="@id/editArrivalDate"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textPassengerCount"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adult"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/editAdultCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:inputType="number"
+            android:hint="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/child"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/editChildCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:inputType="number"
+            android:hint="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/infant"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/editInfantCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:inputType="number"
+            android:hint="0"/>
+    </LinearLayout>
+
+    <!-- кнопка -->
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editInfantCount"
+        android:text="@string/buy_button"/>
+
+</LinearLayout>

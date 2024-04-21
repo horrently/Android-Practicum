@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Бронирование авиабилетов</string>
+
+    <string name="departure_city">Выберите город вылета:</string>
+    <string name="arrival_city">Выберите город прилета:</string>
+    <string name="departure_date">Выберите дату вылета:</string>
+    <string name="arrival_date">Выберите дату прилета:</string>
+    <string name="passenger_count">Количество пассажиров:</string>
+    <string name="adult">Взрослые:</string>
+    <string name="child">Дети:</string>
+    <string name="infant">Младенцы:</string>
+    <string name="buy_button">Купить</string>
+
+    <string-array name="departure_cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Нью-Йорк</item>
+        <item>Лондон</item>
+        <item>Париж</item>
+    </string-array>
+    <string-array name="arrival_cities">
+        <item>Париж</item>
+        <item>Лондон</item>
+        <item>Нью-Йорк</item>
+        <item>Санкт-Петербург</item>
+        <item>Москва</item>
+    </string-array>
+
+</resources>
