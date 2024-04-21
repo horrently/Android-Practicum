@@ -17,39 +17,41 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Person> peopleList;
-    private ArrayAdapter<Person> adapter;
-    private ListView listView;
+    private List<String> names;
+    private ArrayAdapter<String> adapter;
+    private ListView lv;
+    private int lastSelectedIndex = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Создаем список для хранения имен
-        List<String> names = new ArrayList<>();
+        // список для хранения имен
+        names = new ArrayList<>();
 
-        // Создаем интерфейс со списком
-        ListView lv = findViewById(R.id.listView);
+        // интерфейс со списком
+        lv = findViewById(R.id.listView);
 
-        // Добавляем адаптер
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item, names);
+        // адаптер
+        adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, names);
         lv.setAdapter(adapter);
 
-        // TODO: добавить обработчик нажатия на элемент списка для выделения фамилии
+        // обработчик нажатия на элемент списка для выделения фамилии
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Сбрасываем выделение у всех элементов списка
+                // сброс выделения у всех элементов списка
                 for (int i = 0; i < parent.getChildCount(); i++) {
                     parent.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);
                 }
-                // Выделяем выбранный элемент
+                // выделение элемента
                 view.setBackgroundColor(Color.LTGRAY);
+                lastSelectedIndex = position;
             }
         });
 
-        // TODO: добавить кнопку и обработчик для добавления новых элементов в список
+        // кнопка и обработчик для добавления новых элементов в список
         Button addButton = findViewById(R.id.addButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,19 +61,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Метод для добавления случайного человека в список
+    // добавление случайного человека в список
     private void addRandomPerson(List<String> names, ArrayAdapter<String> adapter) {
-        // Получаем массивы имен и фамилий из ресурсов
+        // получаем массивы имен и фамилий из ресурсов
         String[] firstNames = getResources().getStringArray(R.array.first_names);
         String[] lastNames = getResources().getStringArray(R.array.last_names);
-        // Генерируем случайные индексы для выбора имени и фамилии
+        // генерируем случайные индексы для выбора имени и фамилии
         Random random = new Random();
         int firstNameIndex = random.nextInt(firstNames.length);
         int lastNameIndex = random.nextInt(lastNames.length);
-        // Формируем полное имя и добавляем его в список
+        // добавляе и создание фи
         String fullName = firstNames[firstNameIndex] + " " + lastNames[lastNameIndex];
         names.add(fullName);
-        // Уведомляем адаптер о изменениях
+        // уведомление адаптера о изменениях
         adapter.notifyDataSetChanged();
     }
 

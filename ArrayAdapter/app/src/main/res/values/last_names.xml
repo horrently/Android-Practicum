@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="last_names">
+        <item>Иванов</item>
+        <item>Петров</item>
+        <item>Яковлев</item>
+        <item>Кузнецов</item>
+        <item>Панов</item>
+        <item>Ефремов</item>
+        <item>Дьяков</item>
+        <item>Соколов</item>
+        <item>Зорин</item>
+        <item>Ерофеев</item>
+        <item>Шевцов</item>
+        <item>Баранов</item>
+        <item>Львов</item>
+        <item>Соловьев</item>
+    </string-array>
+</resources>

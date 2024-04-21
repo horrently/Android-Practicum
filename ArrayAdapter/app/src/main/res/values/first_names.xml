@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="first_names">
+        <item>Иван</item>
+        <item>Матвей</item>
+        <item>Александр</item>
+        <item>Семен</item>
+        <item>Егор</item>
+        <item>Артем</item>
+        <item>Арсений</item>
+        <item>Николай</item>
+        <item>Данил</item>
+        <item>Елисей</item>
+        <item>Максим</item>
+        <item>Евгений</item>
+        <item>Ярослав</item>
+        <item>Илья</item>
+        <item>Федор</item>
+        <item>Алексей</item>
+    </string-array>
+</resources>
