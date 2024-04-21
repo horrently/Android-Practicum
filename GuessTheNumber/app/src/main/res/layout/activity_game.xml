@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/guessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:layout_centerInParent="true"
+        android:text="@string/Urs" />
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/LowerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessTextView"
+        android:layout_alignParentStart="true"
+        android:text="@string/Lower" />
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/RightAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessTextView"
+        android:layout_centerInParent="true"
+        android:text="@string/AnsButton" />
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/HigherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessTextView"
+        android:layout_alignParentEnd="true"
+        android:text="@string/Higher" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Угадай число</string>
+    <string name="MinVal">Минимальное значение</string>
+    <string name="MaxVal">Максимальное значение</string>
+    <string name="Button">Угадать</string>
+    <string name="Urs">Ваше число: </string>
+    <string name="Lower">Меньше</string>
+    <string name="Higher">Больше</string>
+    <string name="AnsButton">Верно</string>
+</resources>
