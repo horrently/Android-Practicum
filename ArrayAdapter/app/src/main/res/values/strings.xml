@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ArrayAdapter</string>
+
+    <string-array name="first_names">
+        <item>Иван</item>
+        <item>Мария</item>
+        <item>Александр</item>
+        <!-- Добавьте еще имен -->
+    </string-array>
+    <string-array name="last_names">
+        <item>Иванов</item>
+        <item>Петров</item>
+        <item>Сидоров</item>
+        <!-- Добавьте еще фамилий -->
+    </string-array>
+
+</resources>
