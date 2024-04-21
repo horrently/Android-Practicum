@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         lv = findViewById(R.id.listView);
 
         // адаптер
-        adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, names);
+        adapter = new ArrayAdapter<>(this,
+                androidx.constraintlayout.widget.R.layout.support_simple_spinner_dropdown_item,
+                names);
         lv.setAdapter(adapter);
 
         // обработчик нажатия на элемент списка для выделения фамилии
@@ -59,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
                 addRandomPerson(names, adapter);
             }
         });
+
+        // кнопка и обработчик для сортировки
+        Button sortButton = findViewById(R.id.sortButton);
+        sortButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Collections.sort(names);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
     }
 
     // добавление случайного человека в список
@@ -70,11 +83,12 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
         int firstNameIndex = random.nextInt(firstNames.length);
         int lastNameIndex = random.nextInt(lastNames.length);
-        // добавляе и создание фи
+        // добавление и создание фи
         String fullName = firstNames[firstNameIndex] + " " + lastNames[lastNameIndex];
         names.add(fullName);
         // уведомление адаптера о изменениях
         adapter.notifyDataSetChanged();
     }
+
 
 }
