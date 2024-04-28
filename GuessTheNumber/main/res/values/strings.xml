@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Угадай число</string>
+    <string name="MinVal">Минимальное значение</string>
+    <string name="MaxVal">Максимальное значение</string>
+    <string name="Button">Угадать</string>
+    <string name="Yes">Да</string>
+    <string name="No">Нет</string>
+</resources>
